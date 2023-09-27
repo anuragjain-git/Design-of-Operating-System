@@ -1,0 +1,193 @@
+<pre><font color="#00FF00"><b>student@D001-38</b></font>:<font color="#5C5CFF"><b>~/Anurag/DOS_2141010002</b></font>$ cat file1
+Anurag
+jainnn
+<font color="#00FF00"><b>student@D001-38</b></font>:<font color="#5C5CFF"><b>~/Anurag/DOS_2141010002</b></font>$ cat file2
+Anurag
+Jain
+<font color="#00FF00"><b>student@D001-38</b></font>:<font color="#5C5CFF"><b>~/Anurag/DOS_2141010002</b></font>$ diff file1 file2
+2c2
+&lt; jainnn
+---
+&gt; Jain
+<font color="#00FF00"><b>student@D001-38</b></font>:<font color="#5C5CFF"><b>~/Anurag/DOS_2141010002</b></font>$ cmp file1 file2
+file1 file2 differ: byte 8, line 2
+<font color="#00FF00"><b>student@D001-38</b></font>:<font color="#5C5CFF"><b>~/Anurag/DOS_2141010002</b></font>$ cat file1
+Anurag
+jainnn
+<font color="#00FF00"><b>student@D001-38</b></font>:<font color="#5C5CFF"><b>~/Anurag/DOS_2141010002</b></font>$ touch file1
+<font color="#00FF00"><b>student@D001-38</b></font>:<font color="#5C5CFF"><b>~/Anurag/DOS_2141010002</b></font>$ cat file1
+Anurag
+jainnn
+<font color="#00FF00"><b>student@D001-38</b></font>:<font color="#5C5CFF"><b>~/Anurag/DOS_2141010002</b></font>$ cat &gt; file1
+Hello
+How are you?    
+<font color="#00FF00"><b>student@D001-38</b></font>:<font color="#5C5CFF"><b>~/Anurag/DOS_2141010002</b></font>$ cat &gt; file2
+Hi
+How are you?
+<font color="#00FF00"><b>student@D001-38</b></font>:<font color="#5C5CFF"><b>~/Anurag/DOS_2141010002</b></font>$ megre file1 file2
+
+Command &apos;megre&apos; not found, did you mean:
+
+  command &apos;merge&apos; from deb rcs (5.9.4-6)
+
+Try: apt install &lt;deb name&gt;
+
+<font color="#00FF00"><b>student@D001-38</b></font>:<font color="#5C5CFF"><b>~/Anurag/DOS_2141010002</b></font>$ merge file1 file2
+
+Command &apos;merge&apos; not found, but can be installed with:
+
+apt install rcs
+Please ask your administrator.
+
+<font color="#00FF00"><b>student@D001-38</b></font>:<font color="#5C5CFF"><b>~/Anurag/DOS_2141010002</b></font>$ cat &gt; file2
+<font color="#00FF00"><b>student@D001-38</b></font>:<font color="#5C5CFF"><b>~/Anurag/DOS_2141010002</b></font>$ cat file1 &gt; file2
+<font color="#00FF00"><b>student@D001-38</b></font>:<font color="#5C5CFF"><b>~/Anurag/DOS_2141010002</b></font>$ cat file2
+Hello
+How are you?
+<font color="#00FF00"><b>student@D001-38</b></font>:<font color="#5C5CFF"><b>~/Anurag/DOS_2141010002</b></font>$ mv file2 markinfo
+<font color="#00FF00"><b>student@D001-38</b></font>:<font color="#5C5CFF"><b>~/Anurag/DOS_2141010002</b></font>$ ls
+anurag1  anurag3  <font color="#5C5CFF"><b>dir1</b></font>  <font color="#5C5CFF"><b>dir2</b></font>  file1  markinfo
+<font color="#00FF00"><b>student@D001-38</b></font>:<font color="#5C5CFF"><b>~/Anurag/DOS_2141010002</b></font>$ cp file1 reginfo
+<font color="#00FF00"><b>student@D001-38</b></font>:<font color="#5C5CFF"><b>~/Anurag/DOS_2141010002</b></font>$ cat reginfo
+Hello
+How are you?
+<font color="#00FF00"><b>student@D001-38</b></font>:<font color="#5C5CFF"><b>~/Anurag/DOS_2141010002</b></font>$ rm file1
+<font color="#00FF00"><b>student@D001-38</b></font>:<font color="#5C5CFF"><b>~/Anurag/DOS_2141010002</b></font>$ ls
+anurag1  anurag3  <font color="#5C5CFF"><b>dir1</b></font>  <font color="#5C5CFF"><b>dir2</b></font>  markinfo  reginfo
+<font color="#00FF00"><b>student@D001-38</b></font>:<font color="#5C5CFF"><b>~/Anurag/DOS_2141010002</b></font>$ wc -l markinfo
+2 markinfo
+<font color="#00FF00"><b>student@D001-38</b></font>:<font color="#5C5CFF"><b>~/Anurag/DOS_2141010002</b></font>$ wc -w markinfo
+4 markinfo
+<font color="#00FF00"><b>student@D001-38</b></font>:<font color="#5C5CFF"><b>~/Anurag/DOS_2141010002</b></font>$ wc -c markinfo
+19 markinfo
+<font color="#00FF00"><b>student@D001-38</b></font>:<font color="#5C5CFF"><b>~/Anurag/DOS_2141010002</b></font>$ wc markinfo
+ 2  4 19 markinfo
+<font color="#00FF00"><b>student@D001-38</b></font>:<font color="#5C5CFF"><b>~/Anurag/DOS_2141010002</b></font>$ mkdir dir1
+mkdir: cannot create directory ‘dir1’: File exists
+<font color="#00FF00"><b>student@D001-38</b></font>:<font color="#5C5CFF"><b>~/Anurag/DOS_2141010002</b></font>$ cd dir1
+<font color="#00FF00"><b>student@D001-38</b></font>:<font color="#5C5CFF"><b>~/Anurag/DOS_2141010002/dir1</b></font>$ ls
+<font color="#00FF00"><b>student@D001-38</b></font>:<font color="#5C5CFF"><b>~/Anurag/DOS_2141010002/dir1</b></font>$ cat &gt; Personalinfo
+Anurag Jain
+2141010002
+Bolangir
+<font color="#00FF00"><b>student@D001-38</b></font>:<font color="#5C5CFF"><b>~/Anurag/DOS_2141010002/dir1</b></font>$ cd ..
+<font color="#00FF00"><b>student@D001-38</b></font>:<font color="#5C5CFF"><b>~/Anurag/DOS_2141010002</b></font>$ rev markinfo
+olleH
+?uoy era woH
+<font color="#00FF00"><b>student@D001-38</b></font>:<font color="#5C5CFF"><b>~/Anurag/DOS_2141010002</b></font>$ cmp reginfo Personal info
+cmp: invalid --ignore-initial value &apos;info&apos;
+cmp: Try &apos;cmp --help&apos; for more information.
+<font color="#00FF00"><b>student@D001-38</b></font>:<font color="#5C5CFF"><b>~/Anurag/DOS_2141010002</b></font>$ cmp reginfo Personalinfo
+cmp: Personalinfo: No such file or directory
+<font color="#00FF00"><b>student@D001-38</b></font>:<font color="#5C5CFF"><b>~/Anurag/DOS_2141010002</b></font>$ cat &gt; personalinfo
+Anurag jain
+2141010002
+Bolangir
+<font color="#00FF00"><b>student@D001-38</b></font>:<font color="#5C5CFF"><b>~/Anurag/DOS_2141010002</b></font>$ rev markinfo
+olleH
+?uoy era woH
+<font color="#00FF00"><b>student@D001-38</b></font>:<font color="#5C5CFF"><b>~/Anurag/DOS_2141010002</b></font>$ cmp reginfo personalinfo
+reginfo personalinfo differ: byte 1, line 1
+<font color="#00FF00"><b>student@D001-38</b></font>:<font color="#5C5CFF"><b>~/Anurag/DOS_2141010002</b></font>$ diff reginfo personalinfo
+1,2c1,3
+&lt; Hello
+&lt; How are you?
+---
+&gt; Anurag jain
+&gt; 2141010002
+&gt; Bolangir
+<font color="#00FF00"><b>student@D001-38</b></font>:<font color="#5C5CFF"><b>~/Anurag/DOS_2141010002</b></font>$</pre>
+<pre><font color="#00FF00"><b>student@D001-38</b></font>:<font color="#5C5CFF"><b>~/Anurag/DOS_2141010002</b></font>$ ls -li markinfo personalfile reginfo
+ls: cannot access &apos;personalfile&apos;: No such file or directory
+12322437 -rw-rw-r-- 1 student student 19 Sep 27 15:02 markinfo
+12322438 -rw-rw-r-- 1 student student 19 Sep 27 15:05 reginfo
+<font color="#00FF00"><b>student@D001-38</b></font>:<font color="#5C5CFF"><b>~/Anurag/DOS_2141010002</b></font>$ ls -1 | wc -l
+7
+<font color="#00FF00"><b>student@D001-38</b></font>:<font color="#5C5CFF"><b>~/Anurag/DOS_2141010002</b></font>$ ls -1
+anurag1
+anurag3
+<font color="#5C5CFF"><b>dir1</b></font>
+<font color="#5C5CFF"><b>dir2</b></font>
+markinfo
+personalinfo
+reginfo
+<font color="#00FF00"><b>student@D001-38</b></font>:<font color="#5C5CFF"><b>~/Anurag/DOS_2141010002</b></font>$ ls &gt;&gt; filelist
+<font color="#00FF00"><b>student@D001-38</b></font>:<font color="#5C5CFF"><b>~/Anurag/DOS_2141010002</b></font>$ cat filelist
+anurag1
+anurag3
+dir1
+dir2
+filelist
+markinfo
+personalinfo
+reginfo
+<font color="#00FF00"><b>student@D001-38</b></font>:<font color="#5C5CFF"><b>~/Anurag/DOS_2141010002</b></font>$ chmod -w- reginfo
+<font color="#00FF00"><b>student@D001-38</b></font>:<font color="#5C5CFF"><b>~/Anurag/DOS_2141010002</b></font>$ chmod rwx reginfo
+chmod: invalid mode: ‘rwx’
+Try &apos;chmod --help&apos; for more information.
+<font color="#00FF00"><b>student@D001-38</b></font>:<font color="#5C5CFF"><b>~/Anurag/DOS_2141010002</b></font>$ chmod -rwx- reginfo
+<font color="#00FF00"><b>student@D001-38</b></font>:<font color="#5C5CFF"><b>~/Anurag/DOS_2141010002</b></font>$ pwd
+/home/student/Anurag/DOS_2141010002
+<font color="#00FF00"><b>student@D001-38</b></font>:<font color="#5C5CFF"><b>~/Anurag/DOS_2141010002</b></font>$ date;pwd
+Wednesday 27 September 2023 03:44:40 PM IST
+/home/student/Anurag/DOS_2141010002
+<font color="#00FF00"><b>student@D001-38</b></font>:<font color="#5C5CFF"><b>~/Anurag/DOS_2141010002</b></font>$ date;pwd | wc -I
+Wednesday 27 September 2023 03:44:55 PM IST
+wc: invalid option -- &apos;I&apos;
+Try &apos;wc --help&apos; for more information.
+<font color="#00FF00"><b>student@D001-38</b></font>:<font color="#5C5CFF"><b>~/Anurag/DOS_2141010002</b></font>$ date;pwd | wc -l
+Wednesday 27 September 2023 03:44:58 PM IST
+1
+<font color="#00FF00"><b>student@D001-38</b></font>:<font color="#5C5CFF"><b>~/Anurag/DOS_2141010002</b></font>$ (date;pwd) | wc -l
+2
+<font color="#00FF00"><b>student@D001-38</b></font>:<font color="#5C5CFF"><b>~/Anurag/DOS_2141010002</b></font>$ echo *
+anurag1 anurag3 dir1 dir2 filelist markinfo personalinfo reginfo
+<font color="#00FF00"><b>student@D001-38</b></font>:<font color="#5C5CFF"><b>~/Anurag/DOS_2141010002</b></font>$ echo ***
+anurag1 anurag3 dir1 dir2 filelist markinfo personalinfo reginfo
+<font color="#00FF00"><b>student@D001-38</b></font>:<font color="#5C5CFF"><b>~/Anurag/DOS_2141010002</b></font>$ echo &apos;***&apos;
+***
+<font color="#00FF00"><b>student@D001-38</b></font>:<font color="#5C5CFF"><b>~/Anurag/DOS_2141010002</b></font>$ echo \***
+***
+<font color="#00FF00"><b>student@D001-38</b></font>:<font color="#5C5CFF"><b>~/Anurag/DOS_2141010002</b></font>$ echo \*\*\*
+***
+<font color="#00FF00"><b>student@D001-38</b></font>:<font color="#5C5CFF"><b>~/Anurag/DOS_2141010002</b></font>$ echo */*
+dir1/Personalinfo
+<font color="#00FF00"><b>student@D001-38</b></font>:<font color="#5C5CFF"><b>~/Anurag/DOS_2141010002</b></font>$ echo Don&apos;t do this
+&gt; hi
+&gt; bash: unexpected EOF while looking for matching `&apos;&apos;
+bash: syntax error: unexpected end of file
+<font color="#00FF00"><b>student@D001-38</b></font>:<font color="#5C5CFF"><b>~/Anurag/DOS_2141010002</b></font>$ echo Don&apos;t do this
+&gt; Hello
+&gt; hi
+&gt; bash: unexpected EOF while looking for matching `&apos;&apos;
+bash: syntax error: unexpected end of file
+<font color="#00FF00"><b>student@D001-38</b></font>:<font color="#5C5CFF"><b>~/Anurag/DOS_2141010002</b></font>$ echo Don&apos;t do this
+Hello
+hi
+&gt; bash: unexpected EOF while looking for matching `&apos;&apos;
+bash: syntax error: unexpected end of file
+<font color="#00FF00"><b>student@D001-38</b></font>:<font color="#5C5CFF"><b>~/Anurag/DOS_2141010002</b></font>$ echo Don&apos;t do this
+&gt; &apos;
+Dont do this
+
+<font color="#00FF00"><b>student@D001-38</b></font>:<font color="#5C5CFF"><b>~/Anurag/DOS_2141010002</b></font>$ echo hello
+hello
+<font color="#00FF00"><b>student@D001-38</b></font>:<font color="#5C5CFF"><b>~/Anurag/DOS_2141010002</b></font>$ echo &apos;hello&apos;
+hello
+<font color="#00FF00"><b>student@D001-38</b></font>:<font color="#5C5CFF"><b>~/Anurag/DOS_2141010002</b></font>$ echo &quot;hello&quot;
+hello
+<font color="#00FF00"><b>student@D001-38</b></font>:<font color="#5C5CFF"><b>~/Anurag/DOS_2141010002</b></font>$ echo &apos;hello &quot;world&quot;&apos;
+hello &quot;world&quot;
+<font color="#00FF00"><b>student@D001-38</b></font>:<font color="#5C5CFF"><b>~/Anurag/DOS_2141010002</b></font>$ echo &apos;hello &quot;world&quot;
+&gt; hi
+&gt; hiiii
+&gt; &apos;
+hello &quot;world&quot;
+hi
+hiiii
+
+<font color="#00FF00"><b>student@D001-38</b></font>:<font color="#5C5CFF"><b>~/Anurag/DOS_2141010002</b></font>$ echo date
+date
+<font color="#00FF00"><b>student@D001-38</b></font>:<font color="#5C5CFF"><b>~/Anurag/DOS_2141010002</b></font>$ 
+
+</pre>

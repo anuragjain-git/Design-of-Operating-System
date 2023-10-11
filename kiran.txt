@@ -1,0 +1,172 @@
+student@D001-38:~$ mkdir DOS_2141019342/DOSass1/dir1
+mkdir: cannot create directory ‘DOS_2141019342/DOSass1/dir1’: No such file or directory
+student@D001-38:~$ mkdir DOS_2141019342
+student@D001-38:~$ cd DOS_2141019342
+student@D001-38:~/DOS_2141019342$ mkdir DOSass1
+student@D001-38:~/DOS_2141019342$ cd DOSass1
+student@D001-38:~/DOS_2141019342/DOSass1$ mkdir dir1
+student@D001-38:~/DOS_2141019342/DOSass1$ cd dir1
+student@D001-38:~/DOS_2141019342/DOSass1/dir1$ cd ..
+student@D001-38:~/DOS_2141019342/DOSass1$ mkdir dir2
+student@D001-38:~/DOS_2141019342/DOSass1$ cd dir2
+student@D001-38:~/DOS_2141019342/DOSass1/dir2$ cd ..
+student@D001-38:~/DOS_2141019342/DOSass1$ cd ..
+student@D001-38:~/DOS_2141019342$ rmdir DOS_ass1/dir2
+rmdir: failed to remove 'DOS_ass1/dir2': No such file or directory
+student@D001-38:~/DOS_2141019342$ rmdir DOSass1/dir2
+student@D001-38:~/DOS_2141019342$ cd DOSass1
+student@D001-38:~/DOS_2141019342/DOSass1$ ls
+dir1
+student@D001-38:~/DOS_2141019342/DOSass1$ cd dir1
+student@D001-38:~/DOS_2141019342/DOSass1/dir1$ cat >file1
+Kiran Kumar Singh
+2141019342
+CSE
+5th Sem
+Sec - O        
+student@D001-38:~/DOS_2141019342/DOSass1/dir1$ cat >file2
+1st sem - 8.0 sgpa    
+2nd sem - 9.4 sgpa
+3rd sem - 9.1 sgpa
+4th sem - 8.9 sgpa
+student@D001-38:~/DOS_2141019342/DOSass1/dir1$ cat >file3
+student@D001-38:~/DOS_2141019342/DOSass1/dir1$ cat file2 >> file1
+student@D001-38:~/DOS_2141019342/DOSass1/dir1$ mv file1 file3
+student@D001-38:~/DOS_2141019342/DOSass1/dir1$ cat file3
+Kiran Kumar Singh
+2141019342
+CSE
+5th Sem
+Sec - O
+1st sem - 8.0 sgpa
+2nd sem - 9.4 sgpa
+3rd sem - 9.1 sgpa
+4th sem - 8.9 sgpa
+student@D001-38:~/DOS_2141019342/DOSass1/dir1$ mv file2 markinfo
+student@D001-38:~/DOS_2141019342/DOSass1/dir1$ cat markinfo
+1st sem - 8.0 sgpa
+2nd sem - 9.4 sgpa
+3rd sem - 9.1 sgpa
+4th sem - 8.9 sgpa
+student@D001-38:~/DOS_2141019342/DOSass1/dir1$ cp file1 reginfo
+cp: cannot stat 'file1': No such file or directory
+student@D001-38:~/DOS_2141019342/DOSass1/dir1$ cat reginfo
+cat: reginfo: No such file or directory
+student@D001-38:~/DOS_2141019342/DOSass1/dir1$ cat file1
+cat: file1: No such file or directory
+student@D001-38:~/DOS_2141019342/DOSass1/dir1$ cat >file1
+Kiran Kumar Singh
+2141019342
+CSE
+5th Sem
+Sec - O
+student@D001-38:~/DOS_2141019342/DOSass1/dir1$ cp file1 reginfo
+student@D001-38:~/DOS_2141019342/DOSass1/dir1$ cat reginfo
+Kiran Kumar Singh
+2141019342
+CSE
+5th Sem
+Sec - O
+student@D001-38:~/DOS_2141019342/DOSass1/dir1$ ls -li file1 markinfo reginfo
+12322645 -rw-rw-r-- 1 student student 43 Oct 11 14:17 file1
+12322644 -rw-rw-r-- 1 student student 76 Oct 11 14:12 markinfo
+12322646 -rw-rw-r-- 1 student student 43 Oct 11 14:17 reginfo
+student@D001-38:~/DOS_2141019342/DOSass1/dir1$ rm file1
+student@D001-38:~/DOS_2141019342/DOSass1/dir1$ ls
+file3  markinfo  reginfo
+student@D001-38:~/DOS_2141019342/DOSass1/dir1$ wc markinfo
+ 4 20 76 markinfo
+student@D001-38:~/DOS_2141019342/DOSass1/dir1$ cat >personalinfo
+Kiran Kumar Singh
+2141019342
+Bhubaneshwar
+student@D001-38:~/DOS_2141019342/DOSass1/dir1$ cat personalinfo
+Kiran Kumar Singh
+2141019342
+Bhubaneshwar
+student@D001-38:~/DOS_2141019342/DOSass1/dir1$ tac markinfo
+4th sem - 8.9 sgpa
+3rd sem - 9.1 sgpa
+2nd sem - 9.4 sgpa
+1st sem - 8.0 sgpa
+student@D001-38:~/DOS_2141019342/DOSass1/dir1$ rev markinfo
+apgs 0.8 - mes ts1
+apgs 4.9 - mes dn2
+apgs 1.9 - mes dr3
+apgs 9.8 - mes ht4
+student@D001-38:~/DOS_2141019342/DOSass1/dir1$ cmp reginfo personalinfo
+reginfo personalinfo differ: byte 24, line 3
+student@D001-38:~/DOS_2141019342/DOSass1/dir1$ diff reginfo personalinfo
+3,5c3
+< CSE
+< 5th Sem
+< Sec - O
+---
+> Bhubaneshwar
+student@D001-38:~/DOS_2141019342/DOSass1/dir1$ ls -1 | wc -l
+4
+student@D001-38:~/DOS_2141019342/DOSass1/dir1$ ls -I flelist > filelist
+student@D001-38:~/DOS_2141019342/DOSass1/dir1$ cat filelist
+file3
+filelist
+markinfo
+personalinfo
+reginfo
+student@D001-38:~/DOS_2141019342/DOSass1/dir1$ chmod a+w reginfo
+student@D001-38:~/DOS_2141019342/DOSass1/dir1$ ls -l reginfo
+-rw-rw-rw- 1 student student 43 Oct 11 14:17 reginfo
+student@D001-38:~/DOS_2141019342/DOSass1/dir1$ chmod g-w  reginfo
+student@D001-38:~/DOS_2141019342/DOSass1/dir1$ ls -l rginfo
+ls: cannot access 'rginfo': No such file or directory
+student@D001-38:~/DOS_2141019342/DOSass1/dir1$ ls -l reginfo
+-rw-r--rw- 1 student student 43 Oct 11 14:17 reginfo
+student@D001-38:~/DOS_2141019342/DOSass1/dir1$ date; pwd
+Wednesday 11 October 2023 02:22:23 PM IST
+/home/student/DOS_2141019342/DOSass1/dir1
+student@D001-38:~/DOS_2141019342/DOSass1/dir1$ date; pwd | wc -l
+Wednesday 11 October 2023 02:22:35 PM IST
+1
+student@D001-38:~/DOS_2141019342/DOSass1/dir1$ (date; pwd) | wc -l
+2
+student@D001-38:~/DOS_2141019342/DOSass1/dir1$ 
+student@D001-38:~/DOS_2141019342/DOSass1/dir1$ echo *
+file3 filelist markinfo personalinfo reginfo
+student@D001-38:~/DOS_2141019342/DOSass1/dir1$ echo **
+file3 filelist markinfo personalinfo reginfo
+student@D001-38:~/DOS_2141019342/DOSass1/dir1$ echo ***
+file3 filelist markinfo personalinfo reginfo
+student@D001-38:~/DOS_2141019342/DOSass1/dir1$ 
+student@D001-38:~/DOS_2141019342/DOSass1/dir1$ 
+student@D001-38:~/DOS_2141019342/DOSass1/dir1$ echo *
+file3 filelist markinfo personalinfo reginfo
+student@D001-38:~/DOS_2141019342/DOSass1/dir1$ echo ***
+file3 filelist markinfo personalinfo reginfo
+student@D001-38:~/DOS_2141019342/DOSass1/dir1$ echo '***'
+***
+student@D001-38:~/DOS_2141019342/DOSass1/dir1$ echo \***
+***
+student@D001-38:~/DOS_2141019342/DOSass1/dir1$ echo \*\*\*
+***
+student@D001-38:~/DOS_2141019342/DOSass1/dir1$ echo */*
+*/*
+student@D001-38:~/DOS_2141019342/DOSass1/dir1$ echo Don't do this
+> bash: unexpected EOF while looking for matching `''
+bash: syntax error: unexpected end of file
+student@D001-38:~/DOS_2141019342/DOSass1/dir1$ echo "Don't do this"
+Don't do this
+student@D001-38:~/DOS_2141019342/DOSass1/dir1$ echo Hello # world
+Hello
+student@D001-38:~/DOS_2141019342/DOSass1/dir1$ echo "Hello # world"
+Hello # world
+student@D001-38:~/DOS_2141019342/DOSass1/dir1$ echo 'Hello # world'
+Hello # world
+student@D001-38:~/DOS_2141019342/DOSass1/dir1$ echo date
+date
+student@D001-38:~/DOS_2141019342/DOSass1/dir1$ echo 'date'
+date
+student@D001-38:~/DOS_2141019342/DOSass1/dir1$ echo "date"
+date
+student@D001-38:~/DOS_2141019342/DOSass1/dir1$ echo `date`
+Wednesday 11 October 2023 02:25:34 PM IST
+student@D001-38:~/DOS_2141019342/DOSass1/dir1$ 
+
